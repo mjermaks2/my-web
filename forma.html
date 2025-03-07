@@ -10,7 +10,7 @@
     <form>
         <p>Šodienas datums <input name="datums"></p>
         <p>Ja gribi uzzināt šodienas datumu, spied pogu DATUMS 
-            <input onclick="datums.value=new Date();" name="poga" value="DATUMS" type="button">
+            <input type="date" onclick="datums.value=new Date();" name="poga" value="DATUMS" >
         </p>
         <p>Ja gribi izdzēst datumua lodziņa saturu, spied pogu RESET
             <input value="RESET" type="reset">
@@ -20,10 +20,16 @@
         <div>1.skaitlis<input type="text" name="sk1"> </div>
         <div>
             <input value="X" name="reiz" onclick="rez.value=sk1.value*sk2.value" type="button">
+            <input value="+" name="sask" onclick="sas.value=sk1.value+sk2.value" type="button">
+            <input value="-" name="atn" onclick="atnn.value=sk1.value-sk2.value" type="button">
+            <input value="/" name="dal" onclick="dall.value=sk1.value/sk2.value" type="button">
         </div>
         <div>2.skaitlis<input type="text" name="sk2"> </div>
         <hr>
         <div>Rezultāts<input name="rez"> </div>
+        <div>Rezultāts<input name="sas"> </div>
+        <div>Rezultāts<input name="atnn"> </div>
+        <div>Rezultāts<input name="dall"> </div>
     </form>
 </body>
 </html>
