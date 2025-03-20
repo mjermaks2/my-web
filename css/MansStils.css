@@ -1,41 +1,90 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
   box-sizing: border-box;
 }
 
 /* Style the body */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'VT323', monospace;
   margin: 0;
+  background: url('https://media.giphy.com/media/4knozU8q9AXvpod9qy/giphy.gif') center/cover no-repeat fixed;
+  color: rgb(255, 20, 147);
+  font-size: 22px;
+  display: flex;
+  justify-content: center; /* Центрирует контент */
 }
 
 /* Header/logo Title */
 .header {
-  padding: 80px;
-  text-align: center;
-  background: #497D74;
-  color: #71BBB2;
-  
+    position: relative;
+    background: linear-gradient(135deg, rgb(139, 0, 139), rgb(255, 0, 255), rgb(0, 0, 0));
+    background-size: 300% 300%;
+    animation: gradientMove 5s infinite alternate;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgb(255, 0, 255);
 }
 
-/* Increase the font size of the heading */
+/* Анимация переливающегося градиента */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+
+
 .header h1 {
-  font-size: 40px;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'VT323', monospace;
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0, 0.7); 
+    border-radius: 10px;
+    text-shadow: 0px 0px 15px rgb(255, 0, 255); 
 }
 
-/* Style the top navigation bar */
+.header p {
+    font-size: 25px;
+    color: rgb(200, 200, 200);
+    text-shadow: 0px 0px 15px rgb(255, 0, 255); 
+}
+
+/* Navigation bar */
 .navbar {
+  width: 100%;
+  margin: auto;
   overflow: hidden;
   background-color: black;
+  box-shadow: 0px 0px 10px rgb(255, 0, 255);
+  border-radius: 10px;
+}
+
+.container {
+  width: 60%; /* Сделай уже или шире, если нужно */
+  max-width: 900px; /* Максимальная ширина */
+  background-color: rgba(0, 0, 0, 0.85); /* Затемненный фон для контента */
+  padding: 20px;
+  border-radius: 10px; /* Закругление краев */
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7); /* Тень для красивого эффекта */
 }
 
 /* Style the navigation bar links */
 .navbar a {
   float: left;
   display: block;
-  color: white;
+  color: rgb(255, 20, 147);
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 0px 0px 5px rgb(255, 0, 255);
 }
 
 /* Right-aligned link */
@@ -45,62 +94,51 @@ body {
 
 /* Change color on hover */
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: rgb(255, 0, 255);
   color: black;
 }
-   
+
 /* Column container */
 .row {  
-  display: -ms-flexbox; /* IE10 */
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
-} 
-
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #EFE9D1;
-  padding: 20px;
 }
 
 /* Main column */
 .main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: #EFE9D9;
+  flex: 100%;
+  background-color: rgb(10, 0, 10);
   padding: 20px;
-  color: #27445D
+  color: rgb(255, 20, 147);
 }
 
 /* Fake image, just for this example */
 .fakeimg {
-  background-color: #aaa;
+  background-color: rgb(139, 0, 139);
   width: 100%;
-  
 }
 
 /* Footer */
 .footer {
   padding: 20px;
   text-align: center;
-  background: #ddd;
+  background: black;
+  color: rgb(255, 20, 147);
+  text-shadow: 0px 0px 5px rgb(255, 0, 255);
+  box-shadow: 0px 0px 10px rgb(255, 0, 255);
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+/* Responsive layout */
 @media screen and (max-width: 700px) {
   .row {   
     flex-direction: column;
   }
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .navbar a {
     float: none;
     width: 100%;
   }
 }
+
