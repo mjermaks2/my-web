@@ -4,77 +4,112 @@
   box-sizing: border-box;
 }
 
-/* Style the body */
 body {
   font-family: 'VT323', monospace;
   margin: 0;
   background: url('https://media.giphy.com/media/4knozU8q9AXvpod9qy/giphy.gif') center/cover no-repeat fixed;
-  color: rgb(255, 20, 147);
+  color: rgb(255, 255, 255);
   font-size: 22px;
   display: flex;
-  justify-content: center; /* Центрирует контент */
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
 }
 
-/* Header/logo Title */
 .header {
-    position: relative;
-    background: linear-gradient(135deg, rgb(139, 0, 139), rgb(255, 0, 255), rgb(0, 0, 0));
-    background-size: 300% 300%;
-    animation: gradientMove 5s infinite alternate;
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgb(255, 0, 255);
+  position: relative;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.8);
+  margin-bottom: 20px;
 }
-
-/* Анимация переливающегося градиента */
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
-}
-
-
 
 .header h1 {
-    font-size: 60px;
-    font-weight: bold;
-    font-family: 'VT323', monospace;
-    color: white;
-    position: relative;
-    display: inline-block;
-    padding: 10px 30px;
-    background: rgba(0, 0, 0, 0.7); 
-    border-radius: 10px;
-    text-shadow: 0px 0px 15px rgb(255, 0, 255); 
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'VT323', monospace;
+  color: rgb(255, 0, 255);
+  position: relative;
+  display: inline-block;
+  padding: 15px 40px;
+  border: 5px solid rgba(255, 0, 255, 0.6);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0px 20px rgba(255, 0, 255, 0.9);
+}
+.navbar a:last-child {
+  margin-left: auto;
 }
 
 .header p {
-    font-size: 25px;
-    color: rgb(200, 200, 200);
-    text-shadow: 0px 0px 15px rgb(255, 0, 255); 
+  font-size: 22px;
+  color: rgba(200, 200, 200, 0.9);
+  text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.7);
+  font-family: 'VT323', monospace;
 }
 
-/* Navigation bar */
 .navbar {
   width: 100%;
-  margin: auto;
-  overflow: hidden;
-  background-color: black;
-  box-shadow: 0px 0px 10px rgb(255, 0, 255);
+  margin: 0; 
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.7);
   border-radius: 10px;
+  font-family: 'VT323', monospace;
+  padding-left: 0;
+  text-align: left;
+  margin-bottom: 20px;
 }
+
+  .navbar .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.7);
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+    width: 200px;
+  }
+  
+  .navbar .submenu a {
+    float: none; 
+    display: block;
+    color: rgb(255, 20, 147);
+    text-align: left;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0px 0px 5px rgb(255, 0, 255);
+  }
+  .navbar .submenu a:hover {
+    background-color: rgb(255, 0, 255);
+    color: black;
+  }
+  .navbar .dropdown {
+    position: relative;
+    display: inline-block;
+    float: left;
+  }
+
 
 .container {
-  width: 60%; /* Сделай уже или шире, если нужно */
-  max-width: 900px; /* Максимальная ширина */
-  background-color: rgba(0, 0, 0, 0.85); /* Затемненный фон для контента */
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgba(0, 0, 0, 0.85);
   padding: 20px;
-  border-radius: 10px; /* Закругление краев */
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7); /* Тень для красивого эффекта */
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.7);
+  display: flex;
+  flex-direction: column; /* Столбец, чтобы контент шел вниз */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
 }
 
-/* Style the navigation bar links */
 .navbar a {
   float: left;
   display: block;
@@ -85,26 +120,24 @@ body {
   font-weight: bold;
   font-size: 20px;
   text-shadow: 0px 0px 5px rgb(255, 0, 255);
+  margin-left: 0;
 }
 
-/* Right-aligned link */
 .navbar a.right {
   float: right;
 }
 
-/* Change color on hover */
 .navbar a:hover {
   background-color: rgb(255, 0, 255);
   color: black;
 }
 
-/* Column container */
-.row {  
+.row {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column; /* Размещаем основной контент под меню */
+  width: 100%;
 }
 
-/* Main column */
 .main {   
   flex: 100%;
   background-color: rgb(10, 0, 10);

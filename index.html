@@ -5,6 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/MansStils.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 <body>
 
@@ -15,28 +17,43 @@
   </div>
 
   <div class="navbar">
-    <a href="#gimp">Attēlu apstrāde</a>
-    <a href="#">3D modelēšana</a>
-    <a href="#">Video</a>
-    <a href="#">Tekstapstrāde</a>
-    <a href="#">Izklājlapas</a>
-    <a href="#" class="right">Individuālā tēma</a>
+    <div class="dropdown">
+      <a href="#attelaapstrade" onclick="toggleSubmenu()">Attēlu apstrāde ▼</a>
+      <div id="submenu" class="submenu">
+        <a href="#rastragrafika">Rastra grafika</a>
+        <a href="#vektorgrafika">Vektorgrafika</a>
+      </div>
+    </div>
+    <a href="#modelesana" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">3D modelēšana</a>
+    <a href="#montaza" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Montāža</a>
+    <a href="#tekstapstrade" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Tekstapstrāde</a>
+    <a href="#izklajlapas" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Izklājlapas</a>
+    <a href="otrais.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Individuālā tēma</a>
   </div>
 
-  <div class="row">
-    <div class="main">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-    </div>
+  <div class="w3-container" id="#" style="margin-top:70px">
+    <h1 class="main"><b>Sākums</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+    <p class="footer">Šī vietne ir šī semestra projekts Datorikā, kura laikā varējām iziet cauri daudzām dažādām tēmām un iepazīties ar dažādām programmām. </p>
+    <p>Šīs vietnes būtība ir dokumentēt visu mūsu semestri, lai skatītu mūsu uzdevumus visa gada garumā, varat pārvietoties pa navigācijas joslu iepriekš.</p>
   </div>
+
 
   <div class="footer">
     <h2>Footer</h2>
   </div>
 </div>
 
-</body>
+<script>
+  function toggleSubmenu() {
+    var submenu = document.getElementById("submenu");
+    if (submenu.style.display === "block") {
+      submenu.style.display = "none";
+    } else {
+      submenu.style.display = "block";
+    }
+  }
+</script>
 
+</body>
 </html>
