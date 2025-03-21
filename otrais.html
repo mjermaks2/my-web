@@ -1,15 +1,69 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html lang="en">
+<head>
+<title>Mans datorikas portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/MansStils.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+
+<div class="container">
+  <div id="sakums" class="header">
+    <h1>Mans datorikas portfolio</h1>
+    <p>Maksims Jermaks 10.e</p>
+  </div>
+
+  <div class="navbar">
+    <div class="dropdown">
+      <a href="#attelaapstrade" onclick="toggleSubmenu()">Attēlu apstrāde ▼</a>
+      <div id="submenu" class="submenu">
+        <a href="index.html#rastragrafika">Rastrgrafika</a>
+        <a href="index.html#vektorgrafika">Vektorgrafika</a>
+      </div>
+    </div>
+    <a href="index.html#modelesana" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">3D modelēšana</a>
+    <a href="index.html#montaza" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Montāža</a>
+    <a href="index.html#tekstapstrade" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Tekstapstrāde</a>
+    <a href="index.html#izklajlapas" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Izklājlapas</a>
+    <a href="otrais.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Individuālā tēma</a>
+    <a href="index.html#sakums" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sākums</a>
+  </div>
+ 
+ <div class="w3-main">
+    <div class="w3-container" style="margin-top:100px">
+        <h1 class="main"><b>Individuālā tēma</b></h1>
+        <hr style="width:50px;border:5px solid black" class="w3-round">
+        <p>Cilvēki bieži slikti plāno savu laiku – atliek svarīgus darbus, nepietiekami novērtē uzdevumu ilgumu un aizraujas ar mazsvarīgām aktivitātēm. Tas noved pie stresa, neefektivitātes un garām palaistām iespējām. Labs risinājums ir laika plānošanas lietotnes, kas palīdz noteikt prioritātes, atgādina par termiņiem un uzlabo produktivitāti. Piemēram, lietotnes kā Todoist, Google Calendar vai Notion ļauj efektīvāk organizēt uzdevumus. Tās palīdz attīstīt ieradumu strukturēt dienu un labāk izmantot pieejamo laiku. </p>
+    </div>
+    <img src="images/GIFUZDEV.gif" class="center" width="700" height="600">
+        <h1 class="main"><b>Avoti</b></h1>
+        <hr style="width:50px;border:5px solid black" class="w3-round">
+       <div class="w3-main" id="avoti">
+    <p> <a href="https://www.lu.lv/studijas/studentu-sadzive/psihologa-atbalsts/ieteikumi-studijas/studiju-motivacija/laika-planosana/" target="_blank">Latvijas Universitātes raksts par laika plānošanu </a> <p>
+    <p> <a href="https://calendar.google.com/calendar" target="_blank">Google Calendar</a> <p>
+    <p> <a href="https://www.notion.so/" target="_blank">Notion</a> <p>
+    <p> <a href="https://www.todoist.com/" target="_blank">Todoist</a> <p>
+</div>
+    
+
+
+
+
+</div>
+
+<script>
+  function toggleSubmenu() {
+    var submenu = document.getElementById("submenu");
+    if (submenu.style.display === "block") {
+      submenu.style.display = "none";
+    } else {
+      submenu.style.display = "block";
+    }
+  }
+</script>
+
+</body>
 </html>
