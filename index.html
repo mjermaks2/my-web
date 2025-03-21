@@ -11,7 +11,7 @@
 <body>
 
 <div class="container">
-  <div class="header">
+  <div id="sakums" class="header">
     <h1>Mans datorikas portfolio</h1>
     <p>Maksims Jermaks 10.e</p>
   </div>
@@ -20,7 +20,7 @@
     <div class="dropdown">
       <a href="#attelaapstrade" onclick="toggleSubmenu()">Attēlu apstrāde ▼</a>
       <div id="submenu" class="submenu">
-        <a href="#rastragrafika">Rastra grafika</a>
+        <a href="#rastragrafika">Rastrgrafika</a>
         <a href="#vektorgrafika">Vektorgrafika</a>
       </div>
     </div>
@@ -29,31 +29,65 @@
     <a href="#tekstapstrade" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Tekstapstrāde</a>
     <a href="#izklajlapas" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Izklājlapas</a>
     <a href="otrais.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Individuālā tēma</a>
+    <a href="#sakums" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sākums</a>
   </div>
-
+ 
   <div class="w3-container" id="#" style="margin-top:70px">
-    <h1 class="main"><b>Sākums</b></h1>
+    <h1 class="main"><b>Sākums (par projektu)</b></h1>
     <hr style="width:50px;border:5px solid black" class="w3-round">
     <p class="footer">Šī vietne ir šī semestra projekts Datorikā, kura laikā varējām iziet cauri daudzām dažādām tēmām un iepazīties ar dažādām programmām. </p>
     <p>Šīs vietnes būtība ir dokumentēt visu mūsu semestri, lai skatītu mūsu uzdevumus visa gada garumā, varat pārvietoties pa navigācijas joslu iepriekš.</p>
   </div>
     
-  <div class="w3-container" id="rastragrafika" style="margin-top:120px">
-    <h1 class="main"><b>Rastra grafika (GIMP)</b></h1>
+  <div class="w3-container" id="rastragrafika" style="margin-top:200px">
+    <h1 class="main"><b>Rastrgrafika (GIMP)</b></h1>
     <hr style="width:50px;border:5px solid black" class="w3-round">
-    <p>Es iemācījos rediģēt dažādas lietas attēlos, lai tos uzlabotu, kā arī veidoju GIF animācijas, izmantojot rastra grafiku. Es to darīju ar GIMP programmu.</p>
+    <p>Mūsu semestris sākās ar rastrgrafikas programmu - GIMP (GNU Image Manipulation Program), kas palīdzēja mums iemācīties rediģēt fotogrāfijas, lietot filtrus, izveidot gifus un daudz ko citu, darbu piemēri ir redzami zemāk.</p>
     <img src="images/majapirms.jpg" class="left" width="560" height="315">
     <img src="images/majapec.jpg" class="right" width="560" height="315">
     <img src="images/uzmanibubnebri.gif" class="left" width="560" height="315">
     <img src="images/skola.jpg" class="right" width="560" height="315">
   </div>
     
-  <div class="w3-container" id="vektorgrafika" style="margin-top:120px">
+  <div class="w3-container" id="vektorgrafika" style="margin-top:200px">
     <h1 class="main"><b>Vektorgrafika (Inkscape)</b></h1>
     <hr style="width:50px;border:5px solid black" class="w3-round">
-    <p>Es iemācījos veidot logotipu, izmantojot vektorgrafiku. Es to darīju ar Inkscape programmu.</p>
-    <img src="images/manslogo.png" class="left" width="560" height="315">
+    <p>Nākamā tēma bija vektorgrafika, proti, programma Inkscape. Kā zināms, vektorgrafiku izmanto ilustrācijām, ikonām, logotipiem un tehniskajiem zīmējumiem. Tāpēc mēs arī izveidojām savu logotipu mūsu uzņēmumam. Piemērs ir redzams zemāk.</p>
+    <img src="images/manslogo.png" class="center" width="560" height="315">
   </div>
+    
+  <div class="w3-container" id="modelesana" style="margin-top:200px">
+    <h1 class="main"><b>3D modelēšana (Tinkercad)</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+    <p>Mūsu uzdevums bija izgatavot uzņēmuma logo puzles formā. Mūsu komandai bija jāizstrādā, jāizdrukā un jāsaliek puzle, kas nebija viegls process. Lai izveidotu dizainu, mums bija nepieciešama programma Tinkercad, kas ļāva strādāt 3D formātā un izveidot savu modeli, ko vēlāk izdrukājām.</p>
+    <img src="images/tinkercads.png" class="left" width="560" height="315">
+    <img src="images/tink.jpg" class="right" width="560" height="315">
+    <img src="images/tink2.jpg" class="center" width="560" height="315">
+  </div>
+
+<div class="w3-container" id="montaza" style="margin-top:200px">
+  <h1 class="main"><b>Video montāža (Adobe Premiere)</b></h1>
+  <hr style="width:50px;border:5px solid black" class="w3-round">
+  <p>Paralēli tam, kā veidojām savu modeli, bija nepieciešams izveidot video klipu par mūsu darbu. Šajā uzdevumā man palīdzēja maksas programma Adobe Premiere Pro, ar kuras palīdzību varēju savākt video materiālu un izveidot klipu.</p>
+  <iframe src="https://drive.google.com/file/d/1QNoR-i0Zc1VyREDJ7ZsWkBCtXhv7rSML/preview" class="center" width="560" height="315" allow="autoplay"></iframe>
+</div>
+    
+   <div class="w3-container" id="tekstapstrade" style="margin-top:300px">
+    <h1 class="main"><b>Tekstapstrāde (Word)</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+    <p>Protams, datorikas kursu nevar pabeigt bez slavenākās tekstapstrādes programmas - Microsoft Word, kas izstrādāta tālajā 1983. gadā.  Dokumentu apstrāde un teksta rediģēšana nav iespējama bez šīs programmas, un tieši to mēs arī darījām.</p>
+    <img src="images/wordlo.png" class="left" width="370" height="370">
+    <img src="images/word2.png" class="right" width="700" height="370">
+  </div>
+
+   <div class="w3-container" id="izklajlapas" style="margin-top:300px">
+    <h1 class="main"><b>Izklājlapas (Excel)</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+    <p>Datu apstrāde, grafiku veidošana, aprēķinu veikšana, aprēķinu formulas - tas viss tieši attiecas uz Microsoft Excel. Mūsu kursā iemācījāmies efektīvi un produktīvi strādāt šajā programmā, veidojot grafikus, rakstot formulas, izmantojot kārtošanu u.c.</p>
+    <img src="images/excels1.png" class="left" width="560" height="315">
+    <img src="images/excels2.png" class="right" width="560" height="315">
+  </div>
+
 
 
   <div class="footer">
